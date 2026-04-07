@@ -88,11 +88,11 @@ body{background:var(--bg);color:var(--txt);font-family:'Noto Sans KR',sans-serif
 .hero-bottom{
   position:relative;z-index:3;
   margin-top:auto;
-  padding:0 28px 28px;
+  padding:0 28px 36px;
 }
 .hero-name{
   font-family:'Noto Sans KR',sans-serif;
-  font-size:58px;font-weight:900;letter-spacing:0.04em;line-height:0.95;
+  font-size:58px;font-weight:900;letter-spacing:0.04em;line-height:1.05;
   background:linear-gradient(180deg,#FFFFFF 0%,#D0C8F8 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
   margin-bottom:8px;
@@ -114,22 +114,35 @@ body{background:var(--bg);color:var(--txt);font-family:'Noto Sans KR',sans-serif
 
 /* ── SERVICE TAGS ── */
 .service-strip{
-  padding:14px 20px;
+  padding:16px 20px;
   background:var(--bg3);
   border-top:1px solid var(--bp);
   border-bottom:1px solid var(--bp);
-  display:flex;gap:8px;flex-wrap:wrap;
+  display:flex;gap:12px;
   align-items:center;
+  justify-content:center;
 }
-.stag{
-  font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;
-  letter-spacing:0.1em;color:var(--pp2);
-  border:1px solid rgba(176,96,255,0.4);
-  border-radius:4px;padding:5px 12px;
-  background:rgba(176,96,255,0.1);
-  white-space:nowrap;
+.cat-btn{
+  flex:1;text-align:center;
+  font-family:'Noto Sans KR',sans-serif;font-size:17px;font-weight:700;
+  color:#F0EEFF;letter-spacing:0.06em;
+  text-decoration:none;
+  padding:12px 0;
+  border-radius:10px;
+  background:rgba(176,96,255,0.12);
+  border:1px solid rgba(176,96,255,0.35);
+  display:flex;align-items:center;justify-content:center;
+  transition:background 0.15s, border-color 0.15s, transform 0.1s;
 }
-.stag-sep{color:rgba(176,96,255,0.4);font-size:16px;line-height:1;}
+.cat-btn:active{
+  background:rgba(176,96,255,0.25);
+  border-color:rgba(176,96,255,0.6);
+  transform:scale(0.97);
+}
+.cat-sep{
+  font-size:20px;color:rgba(176,96,255,0.3);
+  font-weight:300;flex-shrink:0;
+}
 
 /* ── PURPLE BAR ── */
 .pbar{height:3px;background:linear-gradient(90deg,var(--ppdark),var(--pp2) 50%,var(--ppdark));}
@@ -170,8 +183,8 @@ body{background:var(--bg);color:var(--txt);font-family:'Noto Sans KR',sans-serif
 /* ── SECTION ── */
 .section{
   padding:24px 24px;
-  border-bottom:1px solid rgba(176,96,255,0.2);
-  background:#1E1A32;
+  border-bottom:1px solid rgba(176,96,255,0.3);
+  background:#1A1628;
   opacity:0;transform:translateY(18px);
   transition:opacity 0.5s ease,transform 0.5s ease;
   position:relative;
@@ -379,12 +392,11 @@ body{background:var(--bg);color:var(--txt);font-family:'Noto Sans KR',sans-serif
   </div>
 </div>
 
-<!-- ── SERVICE TAGS ── -->
+<!-- ── CATEGORY BUTTONS ── -->
 <div class="service-strip">
-  <span class="stag">판금 · 도장</span>
-  <span class="stag">수입차 사고수리</span>
-  <span class="stag">보험수리</span>
-  <span class="stag">KGM 성수 총괄 이사</span>
+  <a class="cat-btn" href="http://www.kgm-seongsu.co.kr" target="_blank" rel="noopener">KGM</a>
+  <div class="cat-sep">/</div>
+  <a class="cat-btn" href="https://blog.naver.com/un3466" target="_blank" rel="noopener">수입차</a>
 </div>
 
 <!-- ── PURPLE BAR ── -->
